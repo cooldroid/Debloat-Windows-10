@@ -161,8 +161,8 @@ $domains = @(
     "hubspot.net.edge.net"
     "e9483.a.akamaiedge.net"
 
-    #"www.google-analytics.com"
-    #"padgead2.googlesyndication.com"
+    "www.google-analytics.com"
+    "padgead2.googlesyndication.com"
 	#"mirror1.malwaredomains.com"
 	#"mirror.cedia.org.ec"
     "stats.g.doubleclick.net"

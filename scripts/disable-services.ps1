@@ -5,9 +5,9 @@
 $services = @(
     "diagnosticshub.standardcollector.service" # Microsoft (R) Diagnostics Hub Standard Collector Service
     "DiagTrack"                                # Diagnostics Tracking Service
-    "dmwappushservice"                         # WAP Push Message Routing Service (see known issues)
-    "HomeGroupListener"                        # HomeGroup Listener
-    "HomeGroupProvider"                        # HomeGroup Provider
+    #"dmwappushservice"                         # WAP Push Message Routing Service (see known issues)
+    #"HomeGroupListener"                        # HomeGroup Listener
+    #"HomeGroupProvider"                        # HomeGroup Provider
     "lfsvc"                                    # Geolocation Service
     "MapsBroker"                               # Downloaded Maps Manager
     "NetTcpPortSharing"                        # Net.Tcp Port Sharing Service
@@ -17,7 +17,7 @@ $services = @(
     "TrkWks"                                   # Distributed Link Tracking Client
     "WbioSrvc"                                 # Windows Biometric Service
     #"WlanSvc"                                 # WLAN AutoConfig
-    "WMPNetworkSvc"                            # Windows Media Player Network Sharing Service
+    #"WMPNetworkSvc"                            # Windows Media Player Network Sharing Service
     "wscsvc"                                   # Windows Security Center Service
     #"WSearch"                                 # Windows Search
     "XblAuthManager"                           # Xbox Live Auth Manager

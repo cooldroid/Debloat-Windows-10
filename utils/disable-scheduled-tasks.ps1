@@ -13,7 +13,7 @@ $tasks = @(
 
     #"\Microsoft\Windows\AppID\EDP Policy Manager"
     #"\Microsoft\Windows\AppID\PolicyConverter"
-    "\Microsoft\Windows\AppID\SmartScreenSpecific"
+    #"\Microsoft\Windows\AppID\SmartScreenSpecific"
     #"\Microsoft\Windows\AppID\VerifiedPublisherCertStoreCheck"
 
     "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser"
@@ -42,7 +42,7 @@ $tasks = @(
     "\Microsoft\Windows\CloudExperienceHost\CreateObjectTask"
 
     "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator"
-    "\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask"
+    #"\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask"
     "\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip"
 
     #"\Microsoft\Windows\Data Integrity Scan\Data Integrity Scan"
@@ -203,5 +203,5 @@ foreach ($task in $tasks) {
     $name = $parts[-1]
     $path = $parts[0..($parts.length-2)] -join '\'
 
-    Disable-ScheduledTask -TaskName "$name" -TaskPath "$path" -ErrorAction SilentlyContinue
+    Disable-ScheduledTask -TaskName "$name" -TaskPath "${path}\" -ErrorAction SilentlyContinue
 }

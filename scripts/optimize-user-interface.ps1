@@ -10,10 +10,10 @@ Write-Output "Elevating priviledges for this process"
 do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
 
 Write-Output "Apply MarkC's mouse acceleration fix"
-Set-ItemProperty "HKCU:\Control Panel\Mouse" "MouseSensitivity" "10"
-Set-ItemProperty "HKCU:\Control Panel\Mouse" "MouseSpeed" "0"
-Set-ItemProperty "HKCU:\Control Panel\Mouse" "MouseThreshold1" "0"
-Set-ItemProperty "HKCU:\Control Panel\Mouse" "MouseThreshold2" "0"
+#Set-ItemProperty "HKCU:\Control Panel\Mouse" "MouseSensitivity" "10"
+#Set-ItemProperty "HKCU:\Control Panel\Mouse" "MouseSpeed" "0"
+#Set-ItemProperty "HKCU:\Control Panel\Mouse" "MouseThreshold1" "0"
+#Set-ItemProperty "HKCU:\Control Panel\Mouse" "MouseThreshold2" "0"
 Set-ItemProperty "HKCU:\Control Panel\Mouse" "SmoothMouseXCurve" ([byte[]](0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0xC0, 0xCC, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x80, 0x99, 0x19, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x66, 0x26, 0x00, 0x00,
@@ -36,9 +36,9 @@ Set-ItemProperty "HKCU:\Control Panel\Accessibility\StickyKeys" "Flags" "506"
 Set-ItemProperty "HKCU:\Control Panel\Accessibility\Keyboard Response" "Flags" "122"
 Set-ItemProperty "HKCU:\Control Panel\Accessibility\ToggleKeys" "Flags" "58"
 
-Write-Output "Restoring old volume slider"
-force-mkdir "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\MTCUVC"
-Set-ItemProperty "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\MTCUVC" "EnableMtcUvc" 0
+#Write-Output "Restoring old volume slider"
+#force-mkdir "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\MTCUVC"
+#Set-ItemProperty "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\MTCUVC" "EnableMtcUvc" 0
 
 Write-Output "Setting folder view options"
 Set-ItemProperty "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "Hidden" 1

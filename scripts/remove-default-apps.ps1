@@ -13,6 +13,7 @@ $apps = @(
     # default Windows 10 apps
     "Microsoft.3DBuilder"
     "Microsoft.Appconnector"
+    "Microsoft.Advertising.Xaml" 
     "Microsoft.BingFinance"
     "Microsoft.BingNews"
     "Microsoft.BingSports"
@@ -42,11 +43,11 @@ $apps = @(
     "Microsoft.WindowsSoundRecorder"
     #"Microsoft.WindowsStore"
     "Microsoft.XboxApp"
-	"Microsoft.XboxGameOverlay"
-    "Microsoft.XboxIdentityProvider"
-    "Microsoft.XboxSpeechToTextOverlay"
+    #"Microsoft.XboxGamingOverlay"
+    #"Microsoft.XboxSpeechToTextOverlay"
     "Microsoft.ZuneMusic"
     "Microsoft.ZuneVideo"
+    "Microsoft.Office.Desktop"
     
     
     # Threshold 2 apps
@@ -71,6 +72,8 @@ $apps = @(
 
 
     # non-Microsoft
+    "CAF9E577.Plex"
+    "7EE7776C.LinkedInforWindows"
     "9E2F88E3.Twitter"
     "PandoraMediaInc.29680B314EFC2"
     "Flipboard.Flipboard"
@@ -86,7 +89,7 @@ $apps = @(
     "D52A8D61.FarmVille2CountryEscape"
     "TuneIn.TuneInRadio"
     "GAMELOFTSA.Asphalt8Airborne"
-    #"TheNewYorkTimes.NYTCrossword"
+    "TheNewYorkTimes.NYTCrossword"
     "DB6EA5DB.CyberLinkMediaSuiteEssentials"
     "Facebook.Facebook"
     "flaregamesGmbH.RoyalRevolt2"
@@ -126,5 +129,5 @@ foreach ($app in $apps) {
 }
 
 # Prevents "Suggested Applications" returning
-force-mkdir "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Cloud Content"
-Set-ItemProperty "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Cloud Content" "DisableWindowsConsumerFeatures" 1
+force-mkdir "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CloudContent"
+Set-ItemProperty "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CloudContent" "DisableWindowsConsumerFeatures" 1

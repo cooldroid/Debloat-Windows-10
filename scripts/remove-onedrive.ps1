@@ -6,6 +6,7 @@ Import-Module -DisableNameChecking $PSScriptRoot\..\lib\take-own.psm1
 
 Write-Output "Kill OneDrive process"
 taskkill.exe /F /IM "OneDrive.exe"
+taskkill.exe /F /IM "FileCoAuth.exe"
 taskkill.exe /F /IM "explorer.exe"
 
 Write-Output "Remove OneDrive"
